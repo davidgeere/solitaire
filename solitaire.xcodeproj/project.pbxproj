@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF0DC70A29AD35C10030B950 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF0DC70929AD35C10030B950 /* Preview Assets.xcassets */; };
+		DF0DC70D29AD36500030B950 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC70C29AD36500030B950 /* Globals.swift */; };
+		DF0DC70F29AD36F90030B950 /* Suit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC70E29AD36F90030B950 /* Suit.swift */; };
+		DF0DC71129AD37020030B950 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC71029AD37020030B950 /* Rank.swift */; };
+		DF0DC71329AD370B0030B950 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC71229AD370B0030B950 /* Column.swift */; };
+		DF0DC71729AD37FC0030B950 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC71629AD37FC0030B950 /* Int.swift */; };
+		DF0DC71929AD38330030B950 /* Face.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC71829AD38330030B950 /* Face.swift */; };
+		DF0DC71D29AD38910030B950 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC71C29AD38910030B950 /* Stock.swift */; };
+		DF0DC71F29AD389C0030B950 /* Waste.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC71E29AD389C0030B950 /* Waste.swift */; };
+		DF0DC72129AD38AA0030B950 /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC72029AD38AA0030B950 /* Foundation.swift */; };
+		DF0DC72329AD38B80030B950 /* Tableau.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC72229AD38B80030B950 /* Tableau.swift */; };
+		DF0DC72529AD38DE0030B950 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC72429AD38DE0030B950 /* Game.swift */; };
+		DF0DC72729AD38E90030B950 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC72629AD38E90030B950 /* Card.swift */; };
+		DF0DC72929AD395F0030B950 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC72829AD395F0030B950 /* CardView.swift */; };
+		DF0DC72B29AD41E00030B950 /* StockPileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC72A29AD41E00030B950 /* StockPileView.swift */; };
+		DF0DC72D29AD41FB0030B950 /* WastePileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC72C29AD41FB0030B950 /* WastePileView.swift */; };
+		DF0DC72F29AD42180030B950 /* FoundationPileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC72E29AD42180030B950 /* FoundationPileView.swift */; };
+		DF0DC73129AD422F0030B950 /* TableauPileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC73029AD422F0030B950 /* TableauPileView.swift */; };
+		DF0DC73329AD433A0030B950 /* VectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC73229AD433A0030B950 /* VectorView.swift */; };
+		DF0DC73529AD44A70030B950 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC73429AD44A70030B950 /* Pair.swift */; };
+		DF0DC73929AD44F60030B950 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC73829AD44F60030B950 /* ShakeEffect.swift */; };
+		DF0DC73B29AD52970030B950 /* TableauView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC73A29AD52970030B950 /* TableauView.swift */; };
+		DF0DC73D29AD52A80030B950 /* FoundationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC73C29AD52A80030B950 /* FoundationView.swift */; };
+		DF0DC73F29AD5F390030B950 /* Pile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC73E29AD5F390030B950 /* Pile.swift */; };
+		DF0DC74229AD61B90030B950 /* TableauPile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC74129AD61B90030B950 /* TableauPile.swift */; };
+		DF0DC74429AD61DF0030B950 /* FoundationPile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC74329AD61DF0030B950 /* FoundationPile.swift */; };
+		DF0DC74629AD644F0030B950 /* StockPile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC74529AD644F0030B950 /* StockPile.swift */; };
+		DF0DC74829AD64780030B950 /* WastePile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC74729AD64780030B950 /* WastePile.swift */; };
+		DF0DC74A29AD6CA80030B950 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC74929AD6CA80030B950 /* Hand.swift */; };
+		DFDA26BC29AD342A00A97718 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA26BB29AD342A00A97718 /* Main.swift */; };
+		DFDA26BE29AD342A00A97718 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA26BD29AD342A00A97718 /* MainView.swift */; };
+		DFDA26C029AD342C00A97718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFDA26BF29AD342C00A97718 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DF0DC70929AD35C10030B950 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DF0DC70C29AD36500030B950 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		DF0DC70E29AD36F90030B950 /* Suit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suit.swift; sourceTree = "<group>"; };
+		DF0DC71029AD37020030B950 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
+		DF0DC71229AD370B0030B950 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
+		DF0DC71629AD37FC0030B950 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		DF0DC71829AD38330030B950 /* Face.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Face.swift; sourceTree = "<group>"; };
+		DF0DC71C29AD38910030B950 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		DF0DC71E29AD389C0030B950 /* Waste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waste.swift; sourceTree = "<group>"; };
+		DF0DC72029AD38AA0030B950 /* Foundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foundation.swift; sourceTree = "<group>"; };
+		DF0DC72229AD38B80030B950 /* Tableau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tableau.swift; sourceTree = "<group>"; };
+		DF0DC72429AD38DE0030B950 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		DF0DC72629AD38E90030B950 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DF0DC72829AD395F0030B950 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DF0DC72A29AD41E00030B950 /* StockPileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPileView.swift; sourceTree = "<group>"; };
+		DF0DC72C29AD41FB0030B950 /* WastePileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WastePileView.swift; sourceTree = "<group>"; };
+		DF0DC72E29AD42180030B950 /* FoundationPileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationPileView.swift; sourceTree = "<group>"; };
+		DF0DC73029AD422F0030B950 /* TableauPileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableauPileView.swift; sourceTree = "<group>"; };
+		DF0DC73229AD433A0030B950 /* VectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorView.swift; sourceTree = "<group>"; };
+		DF0DC73429AD44A70030B950 /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
+		DF0DC73829AD44F60030B950 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
+		DF0DC73A29AD52970030B950 /* TableauView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableauView.swift; sourceTree = "<group>"; };
+		DF0DC73C29AD52A80030B950 /* FoundationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationView.swift; sourceTree = "<group>"; };
+		DF0DC73E29AD5F390030B950 /* Pile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pile.swift; sourceTree = "<group>"; };
+		DF0DC74129AD61B90030B950 /* TableauPile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableauPile.swift; sourceTree = "<group>"; };
+		DF0DC74329AD61DF0030B950 /* FoundationPile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationPile.swift; sourceTree = "<group>"; };
+		DF0DC74529AD644F0030B950 /* StockPile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPile.swift; sourceTree = "<group>"; };
+		DF0DC74729AD64780030B950 /* WastePile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WastePile.swift; sourceTree = "<group>"; };
+		DF0DC74929AD6CA80030B950 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		DFDA26B829AD342A00A97718 /* solitaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solitaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFDA26BB29AD342A00A97718 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		DFDA26BD29AD342A00A97718 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DFDA26BF29AD342C00A97718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DFDA26C429AD342C00A97718 /* solitaire.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = solitaire.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFDA26B529AD342A00A97718 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF0DC70829AD35C10030B950 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DC70929AD35C10030B950 /* Preview Assets.xcassets */,
+			);
+			name = "Preview Content";
+			path = "Resources/Preview Content";
+			sourceTree = SOURCE_ROOT;
+		};
+		DF0DC70B29AD363F0030B950 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DC73629AD44CD0030B950 /* Modifiers */,
+				DF0DC71529AD37E70030B950 /* Extensions */,
+				DF0DC71429AD37590030B950 /* Enums */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		DF0DC71429AD37590030B950 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DC70E29AD36F90030B950 /* Suit.swift */,
+				DF0DC71029AD37020030B950 /* Rank.swift */,
+				DF0DC71229AD370B0030B950 /* Column.swift */,
+				DF0DC71829AD38330030B950 /* Face.swift */,
+				DF0DC73429AD44A70030B950 /* Pair.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		DF0DC71529AD37E70030B950 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DC71629AD37FC0030B950 /* Int.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DF0DC71A29AD38600030B950 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DC74029AD61AC0030B950 /* Piles */,
+				DF0DC72629AD38E90030B950 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DF0DC71B29AD386F0030B950 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DC71C29AD38910030B950 /* Stock.swift */,
+				DF0DC71E29AD389C0030B950 /* Waste.swift */,
+				DF0DC72029AD38AA0030B950 /* Foundation.swift */,
+				DF0DC72229AD38B80030B950 /* Tableau.swift */,
+				DF0DC72429AD38DE0030B950 /* Game.swift */,
+				DF0DC74929AD6CA80030B950 /* Hand.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DF0DC73629AD44CD0030B950 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DC73829AD44F60030B950 /* ShakeEffect.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		DF0DC74029AD61AC0030B950 /* Piles */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DC73E29AD5F390030B950 /* Pile.swift */,
+				DF0DC74129AD61B90030B950 /* TableauPile.swift */,
+				DF0DC74329AD61DF0030B950 /* FoundationPile.swift */,
+				DF0DC74529AD644F0030B950 /* StockPile.swift */,
+				DF0DC74729AD64780030B950 /* WastePile.swift */,
+			);
+			path = Piles;
+			sourceTree = "<group>";
+		};
+		DFDA26AF29AD342A00A97718 = {
+			isa = PBXGroup;
+			children = (
+				DFDA26CB29AD355000A97718 /* Resources */,
+				DF0DC70B29AD363F0030B950 /* Library */,
+				DFDA26CA29AD354600A97718 /* Views */,
+				DF0DC71A29AD38600030B950 /* Models */,
+				DF0DC71B29AD386F0030B950 /* Managers */,
+				DF0DC70C29AD36500030B950 /* Globals.swift */,
+				DFDA26BB29AD342A00A97718 /* Main.swift */,
+				DFDA26B929AD342A00A97718 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFDA26B929AD342A00A97718 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFDA26B829AD342A00A97718 /* solitaire.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFDA26CA29AD354600A97718 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFDA26BD29AD342A00A97718 /* MainView.swift */,
+				DF0DC72829AD395F0030B950 /* CardView.swift */,
+				DF0DC72A29AD41E00030B950 /* StockPileView.swift */,
+				DF0DC72C29AD41FB0030B950 /* WastePileView.swift */,
+				DF0DC73C29AD52A80030B950 /* FoundationView.swift */,
+				DF0DC72E29AD42180030B950 /* FoundationPileView.swift */,
+				DF0DC73229AD433A0030B950 /* VectorView.swift */,
+				DF0DC73A29AD52970030B950 /* TableauView.swift */,
+				DF0DC73029AD422F0030B950 /* TableauPileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFDA26CB29AD355000A97718 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF0DC70829AD35C10030B950 /* Preview Content */,
+				DFDA26C429AD342C00A97718 /* solitaire.entitlements */,
+				DFDA26BF29AD342C00A97718 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFDA26B729AD342A00A97718 /* solitaire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFDA26C729AD342C00A97718 /* Build configuration list for PBXNativeTarget "solitaire" */;
+			buildPhases = (
+				DFDA26B429AD342A00A97718 /* Sources */,
+				DFDA26B529AD342A00A97718 /* Frameworks */,
+				DFDA26B629AD342A00A97718 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = solitaire;
+			productName = solitaire;
+			productReference = DFDA26B829AD342A00A97718 /* solitaire.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFDA26B029AD342A00A97718 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					DFDA26B729AD342A00A97718 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = DFDA26B329AD342A00A97718 /* Build configuration list for PBXProject "solitaire" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFDA26AF29AD342A00A97718;
+			productRefGroup = DFDA26B929AD342A00A97718 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFDA26B729AD342A00A97718 /* solitaire */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFDA26B629AD342A00A97718 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF0DC70A29AD35C10030B950 /* Preview Assets.xcassets in Resources */,
+				DFDA26C029AD342C00A97718 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFDA26B429AD342A00A97718 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF0DC73129AD422F0030B950 /* TableauPileView.swift in Sources */,
+				DF0DC73D29AD52A80030B950 /* FoundationView.swift in Sources */,
+				DFDA26BE29AD342A00A97718 /* MainView.swift in Sources */,
+				DF0DC73B29AD52970030B950 /* TableauView.swift in Sources */,
+				DFDA26BC29AD342A00A97718 /* Main.swift in Sources */,
+				DF0DC70F29AD36F90030B950 /* Suit.swift in Sources */,
+				DF0DC72F29AD42180030B950 /* FoundationPileView.swift in Sources */,
+				DF0DC74829AD64780030B950 /* WastePile.swift in Sources */,
+				DF0DC73529AD44A70030B950 /* Pair.swift in Sources */,
+				DF0DC73329AD433A0030B950 /* VectorView.swift in Sources */,
+				DF0DC71729AD37FC0030B950 /* Int.swift in Sources */,
+				DF0DC72929AD395F0030B950 /* CardView.swift in Sources */,
+				DF0DC72529AD38DE0030B950 /* Game.swift in Sources */,
+				DF0DC71929AD38330030B950 /* Face.swift in Sources */,
+				DF0DC72B29AD41E00030B950 /* StockPileView.swift in Sources */,
+				DF0DC71129AD37020030B950 /* Rank.swift in Sources */,
+				DF0DC71F29AD389C0030B950 /* Waste.swift in Sources */,
+				DF0DC72129AD38AA0030B950 /* Foundation.swift in Sources */,
+				DF0DC72729AD38E90030B950 /* Card.swift in Sources */,
+				DF0DC74229AD61B90030B950 /* TableauPile.swift in Sources */,
+				DF0DC73F29AD5F390030B950 /* Pile.swift in Sources */,
+				DF0DC74629AD644F0030B950 /* StockPile.swift in Sources */,
+				DF0DC72D29AD41FB0030B950 /* WastePileView.swift in Sources */,
+				DF0DC72329AD38B80030B950 /* Tableau.swift in Sources */,
+				DF0DC70D29AD36500030B950 /* Globals.swift in Sources */,
+				DF0DC74429AD61DF0030B950 /* FoundationPile.swift in Sources */,
+				DF0DC74A29AD6CA80030B950 /* Hand.swift in Sources */,
+				DF0DC71329AD370B0030B950 /* Column.swift in Sources */,
+				DF0DC71D29AD38910030B950 /* Stock.swift in Sources */,
+				DF0DC73929AD44F60030B950 /* ShakeEffect.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DFDA26C529AD342C00A97718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DFDA26C629AD342C00A97718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		DFDA26C829AD342C00A97718 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Resources/solitaire.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = 2MNBFRSE89;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Solitaire;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.wknd.solitaire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DFDA26C929AD342C00A97718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Resources/solitaire.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = 2MNBFRSE89;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Solitaire;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.card-games";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.wknd.solitaire;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFDA26B329AD342A00A97718 /* Build configuration list for PBXProject "solitaire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFDA26C529AD342C00A97718 /* Debug */,
+				DFDA26C629AD342C00A97718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFDA26C729AD342C00A97718 /* Build configuration list for PBXNativeTarget "solitaire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFDA26C829AD342C00A97718 /* Debug */,
+				DFDA26C929AD342C00A97718 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFDA26B029AD342A00A97718 /* Project object */;
+}

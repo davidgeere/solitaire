@@ -1,0 +1,67 @@
+//
+//  MainView.swift
+//  solitaire
+//
+//  Created by David Geere on 2/27/23.
+//
+
+import SwiftUI
+
+struct MainView: View {
+    
+    @Namespace private var table
+    
+    @EnvironmentObject var game: Game
+    
+    @EnvironmentObject var stock: Stock
+    @EnvironmentObject var waste: Waste
+    @EnvironmentObject var foundation: Foundation
+    @EnvironmentObject var tableau: Tableau
+    
+    var body: some View {
+        VStack(alignment: .trailing, spacing: 0) {
+            VStack(spacing: ( GLOBALS.CARD.WIDTH/*Deck.instance.size.width*/ * ( GLOBALS.TABLE.MARGIN / GLOBALS.CARD.WIDTH ))) {
+                HStack(alignment: .top, spacing: ( GLOBALS.CARD.WIDTH/*Deck.instance.size.width*/ * ( GLOBALS.TABLE.SPACING / GLOBALS.CARD.WIDTH ))) {
+                    
+                    StockPileView(ns: table)
+                        .environmentObject(self.stock)
+                    
+                    WastePileView(ns: table)
+                        .environmentObject(self.waste)
+                    
+                    Color.clear // spacer
+                        .aspectRatio(GLOBALS.CARD.RATIO, contentMode: .fit)
+                        .frame(maxWidth: .infinity)
+                    
+                    FoundationView(on: table)
+                        .environmentObject(self.foundation)
+                }
+                
+                TableauView(on: table)
+                    .environmentObject(self.tableau)
+                
+                Spacer()
+            }
+            .padding((GLOBALS.CARD.WIDTH/*Deck.instance.size.width*/ * ( GLOBALS.TABLE.MARGIN / GLOBALS.CARD.WIDTH )))
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(GLOBALS.TABLE.COLOR)
+        .coordinateSpace(name: GLOBALS.TABLE.NAME)
+        .onAppear {
+            
+            self.game.deal()
+        }
+    }
+}
+
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+            .environmentObject(Game.instance)
+            .environmentObject(Stock.instance)
+            .environmentObject(Tableau.instance)
+            .environmentObject(Waste.instance)
+            .environmentObject(Foundation.instance)
+    }
+}
