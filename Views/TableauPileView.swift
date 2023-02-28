@@ -32,137 +32,134 @@ struct TableauPileView: View {
                 .aspectRatio(GLOBALS.CARD.RATIO, contentMode: .fit)
                 .frame(maxWidth: .infinity)
             
-            VStack(spacing: GLOBALS.TABLE.SPACING - GLOBALS.CARD.HEIGHT) {
-                ForEach($tableau[column].cards) { item in
-                    
-                    var item = item.wrappedValue
-                    
-                    CardView(item: item, in: table)
-                        .onTap { view in
+            ForEach(Array($tableau[column].cards.enumerated()), id: \.0) { (index, card) in
+                
+                CardView(card: card, in: table)
+                    .onTap { view in
+                        
+                        withAnimation(.spring()) {
                             
-                            withAnimation(.spring()) {
-                                
-//                                switch item.rank {
-//                                case .ace: // if it's an ace, place it in the right foundation
-//
-//                                    game.tableau[column].removeAll(where: {  return $0.id == item.id })
-//
-//                                    if var last = game.tableau[column].last {
-//                                        last.facing = .up
-//
-//                                        game.tableau.refresh()
-//                                    }
-//
-//                                    item.facing = .up
-//
-//                                    game.foundation[item.suit].append(item)
-//
-//                                    game.refresh()
-//
-//                                    return
-//
-//                                case .king: // if it's a king place it in an empty tableau
-//
-//                                    if var open = game.tableau.open {
-//
-//                                        game.tableau[column].removeAll(where: {  return $0.id == item.id })
-//
-//                                        if var last = game.tableau[column].last {
-//                                            last.facing = .up
-//
-//                                            game.tableau.refresh()
-//                                        }
-//
-//                                        game.tableau[open].append(item)
-//
-//                                        game.refresh()
-//
-//                                        return
-//
-//                                    } else {
-//
-//                                        guard let last = game.foundation[item.suit].last, last.rank == .queen else { break }
-//
-//                                        game.tableau[column].removeAll(where: {  return $0.id == item.id })
-//
-//                                        if var last = game.tableau[column].last {
-//                                            print("b last", last)
-//
-//                                            last.facing = .up
-//
-//                                            game.tableau.refresh()
-//
-//                                            print("a last", last)
-//                                        }
-//
-//                                        game.foundation[item.suit].append(item)
-//
-//                                        game.refresh()
-//
-//                                        return
-//                                    }
-//
-//                                default: // anything else, see where there is a match and move it there
-//
-//                                    if let last = game.foundation[item.suit].last, last.rank == item.rank.previous {
-//
-//                                        game.tableau[column].removeAll(where: {  return $0.id == item.id })
-//
-//                                        if var last = game.tableau[column].last {
-//                                            print("b last", last)
-//
-//                                            last.facing = .up
-//
-//                                            game.tableau.refresh()
-//
-//                                            print("a last", last)
-//                                        }
-//
-//                                        game.foundation[item.suit].append(item)
-//
-//                                        game.refresh()
-//
-//                                        return
-//
-//                                    } else {
-//                                        for column in Column.allCases {
-//
-//                                            guard column != self.column else { continue }
-//
-//                                            guard let last = game.tableau[column].last, last.rank == item.rank.next, last.suit.pair != item.suit.pair else { continue }
-//
-//                                            game.tableau[column].removeAll(where: {  return $0.id == item.id })
-//
-//                                            if var last = game.tableau[column].last {
-//
-//                                                print("b last", last)
-//
-//                                                last.facing = .up
-//
-//                                                game.tableau.refresh()
-//
-//                                                print("a last", last)
-//                                            }
-//
-//                                            game.tableau[column].append(item)
-//
-//                                            game.refresh()
-//
-//                                            return
-//                                        }
-//                                    }
-//                                }
-                            }
-                            
-                            withAnimation(.easeIn(duration: 0.1)) {
-                                view.numberOfShakes = 10
-                            }
-                            
-                            view.numberOfShakes = 0
+                            //                                switch item.rank {
+                            //                                case .ace: // if it's an ace, place it in the right foundation
+                            //
+                            //                                    game.tableau[column].removeAll(where: {  return $0.id == item.id })
+                            //
+                            //                                    if var last = game.tableau[column].last {
+                            //                                        last.facing = .up
+                            //
+                            //                                        game.tableau.refresh()
+                            //                                    }
+                            //
+                            //                                    item.facing = .up
+                            //
+                            //                                    game.foundation[item.suit].append(item)
+                            //
+                            //                                    game.refresh()
+                            //
+                            //                                    return
+                            //
+                            //                                case .king: // if it's a king place it in an empty tableau
+                            //
+                            //                                    if var open = game.tableau.open {
+                            //
+                            //                                        game.tableau[column].removeAll(where: {  return $0.id == item.id })
+                            //
+                            //                                        if var last = game.tableau[column].last {
+                            //                                            last.facing = .up
+                            //
+                            //                                            game.tableau.refresh()
+                            //                                        }
+                            //
+                            //                                        game.tableau[open].append(item)
+                            //
+                            //                                        game.refresh()
+                            //
+                            //                                        return
+                            //
+                            //                                    } else {
+                            //
+                            //                                        guard let last = game.foundation[item.suit].last, last.rank == .queen else { break }
+                            //
+                            //                                        game.tableau[column].removeAll(where: {  return $0.id == item.id })
+                            //
+                            //                                        if var last = game.tableau[column].last {
+                            //                                            print("b last", last)
+                            //
+                            //                                            last.facing = .up
+                            //
+                            //                                            game.tableau.refresh()
+                            //
+                            //                                            print("a last", last)
+                            //                                        }
+                            //
+                            //                                        game.foundation[item.suit].append(item)
+                            //
+                            //                                        game.refresh()
+                            //
+                            //                                        return
+                            //                                    }
+                            //
+                            //                                default: // anything else, see where there is a match and move it there
+                            //
+                            //                                    if let last = game.foundation[item.suit].last, last.rank == item.rank.previous {
+                            //
+                            //                                        game.tableau[column].removeAll(where: {  return $0.id == item.id })
+                            //
+                            //                                        if var last = game.tableau[column].last {
+                            //                                            print("b last", last)
+                            //
+                            //                                            last.facing = .up
+                            //
+                            //                                            game.tableau.refresh()
+                            //
+                            //                                            print("a last", last)
+                            //                                        }
+                            //
+                            //                                        game.foundation[item.suit].append(item)
+                            //
+                            //                                        game.refresh()
+                            //
+                            //                                        return
+                            //
+                            //                                    } else {
+                            //                                        for column in Column.allCases {
+                            //
+                            //                                            guard column != self.column else { continue }
+                            //
+                            //                                            guard let last = game.tableau[column].last, last.rank == item.rank.next, last.suit.pair != item.suit.pair else { continue }
+                            //
+                            //                                            game.tableau[column].removeAll(where: {  return $0.id == item.id })
+                            //
+                            //                                            if var last = game.tableau[column].last {
+                            //
+                            //                                                print("b last", last)
+                            //
+                            //                                                last.facing = .up
+                            //
+                            //                                                game.tableau.refresh()
+                            //
+                            //                                                print("a last", last)
+                            //                                            }
+                            //
+                            //                                            game.tableau[column].append(item)
+                            //
+                            //                                            game.refresh()
+                            //
+                            //                                            return
+                            //                                        }
+                            //                                    }
+                            //                                }
                         }
-                    //                .rotation3DEffect(item.facing == .up ? .degrees(180): .zero, axis: (x: .zero, y: 1, z: .zero))
-                    //                .matchedGeometryEffect(id: item.id, in: ns, isSource: manager.selectedItem != item)
-                }
+                        
+                        withAnimation(.easeIn(duration: 0.1)) {
+                            view.numberOfShakes = 10
+                        }
+                        
+                        view.numberOfShakes = 0
+                    }
+                    .offset(CGSize(width: 0.0, height: CGFloat(index * 40)))
+                //                .rotation3DEffect(item.facing == .up ? .degrees(180): .zero, axis: (x: .zero, y: 1, z: .zero))
+                //                .matchedGeometryEffect(id: item.id, in: ns, isSource: manager.selectedItem != item)
             }
         }
     }

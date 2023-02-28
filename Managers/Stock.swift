@@ -21,6 +21,10 @@ class Stock: ObservableObject {
         
     }
     
+    public func add(_ card: Card) {
+        self.pile.cards.append(card)
+    }
+    
     public func waste() -> Card? {
         return self.pile.cards.popLast()
     }

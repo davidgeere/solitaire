@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardView: View {
 
-    @State var item: Card
+    @Binding var card: Card
     @State var numberOfShakes: CGFloat
     
     private var onTapAction: ((CardView) -> Void)?
@@ -18,10 +18,10 @@ struct CardView: View {
     
     var ns: Namespace.ID
     
-    @Namespace private var card
+    @Namespace private var side
     
-    init(item: Card, in namespace: Namespace.ID) {
-        self._item = State(initialValue: item)
+    init(card: Binding<Card>, in namespace: Namespace.ID) {
+        self._card = Binding(projectedValue: card)
         self._numberOfShakes = State(initialValue: 0)
         
         self.axis = (x: .zero, y: 1, z: .zero)
@@ -31,29 +31,29 @@ struct CardView: View {
     var body: some View {
         
         Group {
-            switch item.facing {
+            switch card.facing {
             case .up:
-                VectorView("decks/chunky/\(item.suit.name)/\(item.rank.name)")
+                VectorView("decks/chunky/\(card.suit.name)/\(card.rank.name)")
                     .aspectRatio(GLOBALS.CARD.RATIO, contentMode: .fit)
-                    .matchedGeometryEffect(id: item.id, in: card)
+                    .matchedGeometryEffect(id: card.id, in: side)
                     .rotation3DEffect(.degrees(180), axis: self.axis)
                     
             case .down:
                 VectorView("decks/chunky/back")
                     .aspectRatio(GLOBALS.CARD.RATIO, contentMode: .fit)
-                    .matchedGeometryEffect(id: item.id, in: card)
+                    .matchedGeometryEffect(id: card.id, in: side)
                     .rotation3DEffect(.degrees(0), axis: self.axis)
             }
         }
         .modifier(ShakeEffect(shake_number: numberOfShakes))
-        .rotation3DEffect(item.facing == .up ? .degrees(180): .zero, axis: self.axis)
-        .animation(.easeIn(duration: 0.3), value: item.facing)
+        .rotation3DEffect(card.facing == .up ? .degrees(180): .zero, axis: self.axis)
+        .animation(.easeIn(duration: 0.3), value: card.facing)
         .onTapGesture {
             if let onTapAction {
                 onTapAction(self)
             }
         }
-        .matchedGeometryEffect(id: item.id, in: ns)//, isSource: manager.selectedItem != item)
+        .matchedGeometryEffect(id: card.id, in: ns)//, isSource: manager.selectedItem != item)
     }
     
     public func onTap(_ handler: @escaping (CardView) -> Void) -> CardView {
@@ -68,6 +68,6 @@ struct CardView_Previews: PreviewProvider {
     @Namespace static private var card
     
     static var previews: some View {
-        CardView(item: Card(suit: .diamonds, rank: .three), in: card)
+        CardView(card: .constant(Card(suit: .diamonds, rank: .three)), in: card)
     }
 }

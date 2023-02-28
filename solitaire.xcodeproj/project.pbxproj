@@ -36,6 +36,7 @@
 		DF0DC74629AD644F0030B950 /* StockPile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC74529AD644F0030B950 /* StockPile.swift */; };
 		DF0DC74829AD64780030B950 /* WastePile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC74729AD64780030B950 /* WastePile.swift */; };
 		DF0DC74A29AD6CA80030B950 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0DC74929AD6CA80030B950 /* Hand.swift */; };
+		DFAA81B129ADBE94007BB07B /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAA81B029ADBE94007BB07B /* BlankView.swift */; };
 		DFDA26BC29AD342A00A97718 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA26BB29AD342A00A97718 /* Main.swift */; };
 		DFDA26BE29AD342A00A97718 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDA26BD29AD342A00A97718 /* MainView.swift */; };
 		DFDA26C029AD342C00A97718 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFDA26BF29AD342C00A97718 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		DF0DC74529AD644F0030B950 /* StockPile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPile.swift; sourceTree = "<group>"; };
 		DF0DC74729AD64780030B950 /* WastePile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WastePile.swift; sourceTree = "<group>"; };
 		DF0DC74929AD6CA80030B950 /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		DFAA81B029ADBE94007BB07B /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 		DFDA26B829AD342A00A97718 /* solitaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solitaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDA26BB29AD342A00A97718 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		DFDA26BD29AD342A00A97718 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				DF0DC73229AD433A0030B950 /* VectorView.swift */,
 				DF0DC73A29AD52970030B950 /* TableauView.swift */,
 				DF0DC73029AD422F0030B950 /* TableauPileView.swift */,
+				DFAA81B029ADBE94007BB07B /* BlankView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,7 +256,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DFDA26B329AD342A00A97718 /* Build configuration list for PBXProject "solitaire" */;
+			buildConfigurationList = DFDA26B329AD342A00A97718 /* Build configuration list for PBXProject "Solitaire" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -305,6 +308,7 @@
 				DF0DC72B29AD41E00030B950 /* StockPileView.swift in Sources */,
 				DF0DC71129AD37020030B950 /* Rank.swift in Sources */,
 				DF0DC71F29AD389C0030B950 /* Waste.swift in Sources */,
+				DFAA81B129ADBE94007BB07B /* BlankView.swift in Sources */,
 				DF0DC72129AD38AA0030B950 /* Foundation.swift in Sources */,
 				DF0DC72729AD38E90030B950 /* Card.swift in Sources */,
 				DF0DC74229AD61B90030B950 /* TableauPile.swift in Sources */,
@@ -510,7 +514,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DFDA26B329AD342A00A97718 /* Build configuration list for PBXProject "solitaire" */ = {
+		DFDA26B329AD342A00A97718 /* Build configuration list for PBXProject "Solitaire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFDA26C529AD342C00A97718 /* Debug */,

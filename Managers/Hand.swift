@@ -9,20 +9,27 @@ import Foundation
 
 class Hand: ObservableObject {
     
-    private var cards: [Card]
+    @Published public var cards: [Card]
     
     public init() {
         
         self.cards = []
         
-        for suit in Suit.allCases {
-             for rank in Rank.allCases {
-                 self.cards.append(Card(suit: suit, rank: rank))
-             }
-         }
-         
-        self.shuffle()
+        self.reset()
         
+    }
+    
+    public func reset() {
+        
+        self.cards = []
+        
+        for suit in Suit.allCases {
+            for rank in Rank.allCases {
+                self.cards.append(Card(suit: suit, rank: rank))
+            }
+        }
+        
+        self.shuffle()
     }
     
     public func isEmpty() -> Bool {

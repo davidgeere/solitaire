@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Card: Identifiable, Equatable {
+struct Card: Identifiable, Equatable, Hashable {
     
     var id = UUID()
     

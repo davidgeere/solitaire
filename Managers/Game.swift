@@ -15,9 +15,9 @@ class Game: ObservableObject {
     public var foundation: Foundation
     public var tableau: Tableau
     
-    public init(stock: Stock, waste: Waste, foundation: Foundation, tableau: Tableau) {
+    public init(hand: Hand, stock: Stock, waste: Waste, foundation: Foundation, tableau: Tableau) {
         
-        self.hand = Hand()
+        self.hand = hand
         
         self.stock = stock
         self.waste = waste
@@ -27,6 +27,8 @@ class Game: ObservableObject {
     }
     
     public func clear() {
+        
+        self.hand.reset()
         
         self.tableau.clear()
         self.stock.clear()
@@ -41,33 +43,45 @@ class Game: ObservableObject {
         
         self.clear()
         
-        self.dealToTableau()
-        self.dealToStock()
+        var column = Column.one
         
-    }
-    
-    public func dealToTableau() {
+        print("hand", self.hand.cards.count, "tableau:", self.tableau.count, "stock", self.stock.pile.cards.count)
         
-        for column in Column.allCases {
-            for i in 1...column.value {
-                
-                guard var card = self.hand.dealCard() else { continue }
-                
-                if i == column.value {
-                    card.facing = .up
-                }
-                
-                self.tableau[column].add(card: card)
-            }
-        }
-        
-    }
-    
-    public func dealToStock() {
-        
+//        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
         while var card = self.hand.dealCard() {
-            self.stock.pile.add(card: card)
+
+//                guard var card = self.hand.dealCard() else { return timer.invalidate() }
+                
+                if self.tableau.count < 28 {
+
+                    while self.tableau[column].cards.count > column.value {
+                        column = column.next
+                    }
+                    
+                    if self.tableau[column].cards.count == column.value {
+                        card.facing = .up
+                    }
+                    
+                    print("\(column):", self.tableau[column].cards.count, column.value)
+                    
+                    self.tableau.add(card, to: column)
+                    
+                    self.refresh()
+                    
+                    column = column.next
+                    
+                } else {
+                    
+                    self.stock.add(card)
+                    
+                    self.refresh()
+                    
+                }
+            
+            print("hand", self.hand.cards.count, "tableau:", self.tableau.count, "stock", self.stock.pile.cards.count)
         }
+        
+        self.refresh()
         
     }
     
@@ -100,5 +114,5 @@ class Game: ObservableObject {
         self.objectWillChange.send()
     }
     
-    public static var instance = Game(stock: Stock.instance, waste: Waste.instance, foundation: Foundation.instance, tableau: Tableau.instance)
+    public static var instance = Game(hand: Hand.instance, stock: Stock.instance, waste: Waste.instance, foundation: Foundation.instance, tableau: Tableau.instance)
 }

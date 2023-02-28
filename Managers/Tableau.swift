@@ -95,6 +95,10 @@ class Tableau: ObservableObject {
         }
     }
     
+    public func add(_ card: Card, to column: Column) {
+        self[column].cards.append(card)
+    }
+    
     public func refresh() {
         self.objectWillChange.send()
     }

@@ -12,6 +12,7 @@ struct Main: App {
     
     @StateObject public var game: Game
     
+    @StateObject var hand: Hand
     @StateObject var stock: Stock
     @StateObject var waste: Waste
     @StateObject var foundation: Foundation
@@ -19,13 +20,15 @@ struct Main: App {
     
     public init() {
         
+        let hand = Hand()
         let stock = Stock()
         let waste = Waste()
         let foundation = Foundation()
         let tableau = Tableau()
         
-        let game = Game(stock: stock, waste: waste, foundation: foundation, tableau: tableau)
+        let game = Game(hand: hand, stock: stock, waste: waste, foundation: foundation, tableau: tableau)
         
+        self._hand = StateObject(wrappedValue: hand)
         self._stock = StateObject(wrappedValue: stock)
         self._waste = StateObject(wrappedValue: waste)
         self._foundation = StateObject(wrappedValue: foundation)
@@ -39,6 +42,7 @@ struct Main: App {
         WindowGroup {
             MainView()
                 .environmentObject(self.game)
+                .environmentObject(self.hand)
                 .environmentObject(self.stock)
                 .environmentObject(self.tableau)
                 .environmentObject(self.waste)

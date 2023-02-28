@@ -23,9 +23,7 @@ struct WastePileView: View {
             
             ForEach($manager.waste.pile.cards) { item in
                 
-                var item = item.wrappedValue
-                
-                CardView(item: item, in: ns)
+                CardView(card: item, in: ns)
                     .onTap { view in
                         
                         withAnimation(.spring()) {

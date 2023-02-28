@@ -31,11 +31,9 @@ struct FoundationPileView: View {
                 .aspectRatio(GLOBALS.CARD.RATIO, contentMode: .fit)
                 .frame(maxWidth: .infinity)
             
-            ForEach($foundation[suit].cards) { item in
+            ForEach($foundation[suit].cards) { card in
                 
-                var item = item.wrappedValue
-                
-                CardView(item: item, in: table)
+                CardView(card: card, in: table)
                     .onTap { view in
                         
                         withAnimation(.spring()) {
